@@ -4,7 +4,6 @@ import bodyParser from "body-parser";
 import cors from "cors";
 
 const app = express();
-const port = 8000;
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -32,6 +31,11 @@ app.post("/", async (request, response) => {
     output: result.data.choices[0].message,
   });
 });
+
+let port = process.env.PORT;
+if(port == null || port == ""){
+  port = 8000;
+}
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
