@@ -19,7 +19,7 @@ function App() {
 
     setMessage("");
 
-    fetch("http://localhost:8000/", {
+    fetch("https://car-ginie.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
