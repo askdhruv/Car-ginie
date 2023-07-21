@@ -10,7 +10,7 @@ app.use(cors());
 
 const configuration = new Configuration({
   organization: "org-PQT3Qmih2bdbJOx27s2XW8kc",
-  apiKey: "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",
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -18,11 +18,11 @@ app.post("/", async (request, response) => {
   const { chats } = request.body;
 
   const result = await openai.createChatCompletion({
-    model: "gpt-3.5-turbo",
+    model: "gpt-4",
     messages: [
       {
         role: "system",
-        content: "You are a Car Ginie. You can help people choose waht car they want to buy.",
+        content: "You are a Car Ginie. You can help people choose what car they want to buy.",
       },
       ...chats,
     ],
