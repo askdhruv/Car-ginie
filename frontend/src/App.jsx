@@ -6,6 +6,7 @@ function App() {
   const [chats, setChats] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
 
+  
   const chat = async (e, message) => {
     e.preventDefault();
 
